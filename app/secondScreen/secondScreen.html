@@ -1,0 +1,43 @@
+<div layout="column" ng-cloak="" ng-app="bpui">
+	<md-content class="md-padding">
+		<form ng-submit="secondScreenCtrl.submit()" name="secondScreenForm">
+			<div layout-gt-sm="column">
+				<md-card>
+					<md-toolbar class="md-accent md-hue-3">
+						<div class="md-toolbar-tools">
+							<h2 flex>
+								<md-icon md-font-icon="fa fa-plus-circle fa-2x"></md-icon>
+								<span>Add User</span>
+							</h2>
+						</div>
+					</md-toolbar>
+					<md-card-title>
+						<md-card-title-text>
+							<span class="md-subhead"><md-icon md-font-icon="fa fa-info-circle"></md-icon>Second Screen Form</span>
+						</md-card-title-text>
+					</md-card-title>
+					<md-card-content>
+						<div layout="column">
+							<md-input-container>
+								<label>User Name</label>
+								<input ng-required="true" ng-model="secondScreenCtrl.secondScreenInfo.userName">
+							</md-input-container>
+							<md-input-container>
+								<label>Password</label>
+								<input type="password" ng-required="true" ng-model="secondScreenCtrl.secondScreenInfo.password">
+							</md-input-container>
+							<md-input-container>
+								<label>Confirm Password</label>
+								<input type="password" ng-required="true" ng-model="secondScreenCtrl.secondScreenInfo.confirmPassword">
+							</md-input-container>
+						</div>
+					</md-card-content>
+					<md-card-actions layout="row" layout-align="end center">
+						<md-button class="md-primary" ng-click="secondScreenCtrl.clearForm()">Clear</md-button>
+						<md-button type="submit" class="md-raised md-primary" ng-disabled="secondScreenForm.$invalid">Submit</md-button>
+					</md-card-actions>
+				</md-card>
+			</div>
+		</form>
+	</md-content>
+</div>

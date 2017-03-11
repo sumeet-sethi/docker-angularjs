@@ -1,0 +1,121 @@
+<div ng-cloak="">
+	<md-content class="md-padding" layout="row">
+		<div flex-xs="" flex-gt-xs="20" layout="column">
+			<md-card>
+				<md-toolbar class="md-accent md-hue-3">
+					<div class="md-toolbar-tools">
+						<h2 flex>
+							<span>Verified Team Preview</span>
+						</h2>
+					</div>
+				</md-toolbar>
+				<md-card-title>
+					<md-card-title-text>
+						<span class="md-headline">Team A</span>
+					</md-card-title-text>
+				</md-card-title>
+				<md-card-content>
+					<div layout="column">
+						<md-input-container>
+							<label>User</label>
+							<input ng-disabled="true" ng-model="homeCtrl.teamPreview.aTeam.user">
+							<md-icon md-font-icon="fa fa-check-circle fa-2x" class="successCheck" ng-if="homeCtrl.teamPreview.aTeam.user !== ''"></md-icon>
+						</md-input-container>
+					</div>
+				</md-card-content>
+				<md-card-title>
+					<md-card-title-text>
+						<span class="md-headline">Team B</span>
+					</md-card-title-text>
+				</md-card-title>
+				<md-card-content>
+					<div layout="column">
+						<md-input-container>
+							<label>User</label>
+							<input ng-disabled="true" ng-model="homeCtrl.teamPreview.bTeam.user">
+							<md-icon md-font-icon="fa fa-check-circle fa-2x" class="successCheck" ng-if="homeCtrl.teamPreview.bTeam.user !== ''"></md-icon>
+						</md-input-container>
+					</div>
+				</md-card-content>
+			</md-card>
+		</div>
+		<div flex-xs="" flex-gt-xs="80" layout="column">
+			<md-card>
+				<md-toolbar class="md-accent md-hue-3">
+					<div class="md-toolbar-tools">
+						<h2 flex>
+							<span>User Access Type</span>
+						</h2>
+					</div>
+				</md-toolbar>
+				<md-card-title>
+					<md-card-title-text>
+						<span class="md-subhead"><md-icon md-font-icon="fa fa-info-circle"></md-icon>Pick a user type to begin</span>
+					</md-card-title-text>
+				</md-card-title>
+				<md-card-content>
+					<div layout="column">
+						<md-radio-group ng-model="homeCtrl.bpUserType">
+							<md-radio-button value="admin" class="md-primary"><b>Admin</b></md-radio-button>
+							<md-radio-button value="guest" class="md-primary"><b>Guest</b></md-radio-button>
+						</md-radio-group>
+					</div>
+				</md-card-content>
+			</md-card>
+			<form ng-submit="homeCtrl.bpAPI(true)" name="bpForm">
+				<md-card>
+					<md-toolbar class="md-accent md-hue-3">
+						<div class="md-toolbar-tools">
+							<h2 flex>
+								<span>Device Information</span>
+							</h2>
+						</div>
+					</md-toolbar>
+					<md-card-title>
+						<md-card-title-text>
+							<span class="md-subhead"><md-icon md-font-icon="fa fa-info-circle"></md-icon>Enter Team A and Team B users</span>
+						</md-card-title-text>
+					</md-card-title>
+					<div layout-gt-xs="row">
+						<div flex-gt-xs="50">
+							<md-card-title>
+								<md-card-title-text>
+									<span class="md-headline">Team A</span>
+								</md-card-title-text>
+							</md-card-title>
+
+							<md-card-content>
+								<div layout="column">
+									<md-input-container>
+										<label>User</label>
+										<input ng-model="homeCtrl.verifyUser.aTeam.user" ng-disabled="homeCtrl.bpUserType === null">
+									</md-input-container>
+								</div>
+							</md-card-content>
+						</div>
+						<div flex-gt-xs="50">
+							<md-card-title>
+								<md-card-title-text>
+									<span class="md-headline">Team B</span>
+								</md-card-title-text>
+							</md-card-title>
+							<md-card-content>
+								<div layout="column">
+									<md-input-container>
+										<label>User</label>
+										<input ng-model="homeCtrl.verifyUser.bTeam.user" ng-disabled="homeCtrl.bpUserType === null">
+									</md-input-container>
+								</div>
+							</md-card-content>
+						</div>
+					</div>
+					<md-card-actions layout="row" layout-align="end center">
+						<md-button class="md-primary" ng-click="homeCtrl.clearForm()" ng-disabled="homeCtrl.bpUserType === null">Clear</md-button>
+						<md-button class="md-raised md-primary" ng-click="homeCtrl.bpAPI(false)">Verify</md-button>
+						<md-button type="submit" class="md-raised md-primary" ng-disabled="!homeCtrl.isRequestVerified">Submit</md-button>
+					</md-card-actions>
+				</md-card>
+			</form>
+		</div>
+	</md-content>
+</div>

@@ -1,0 +1,35 @@
+.successCheck {
+	color: #159b4b;
+}
+
+.failedCross {
+	color: #a50808;
+}
+
+md-toast.md-error-notification-theme div.md-toast-content{
+	color: white !important;
+	font-weight: bold;
+	background-color: #a50808 !important;
+}
+
+md-toast.md-success-notification-theme div.md-toast-content{
+	color: white !important;
+	font-weight: bold;
+	background-color: #159b4b !important;
+}
+
+.imageCursor {
+	cursor: pointer;
+}
+
+.customCard .card-media {
+	background-color: #999999; 
+}
+
+.iconAccentShade {
+	color: rgb(69,90,100);
+}
+
+.customTitle {
+	text-align: center
+}

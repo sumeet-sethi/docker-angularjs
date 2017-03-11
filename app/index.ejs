@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Boiler Plate (BP)</title>
+    </head>
+    <body ng-strict-di ng-app="bpui" ng-controller="BpuiController as bpuiCtrl">
+        <h4 ng-hide="bpuiCtrl.isAppRendered"> Loading... </h4>
+        <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+            <div ui-view="menu"></div>
+        </md-sidenav>
+        <md-content flex layout-fill layout="column">
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <md-button class="md-icon-button" aria-label="open menu" ng-click="bpuiCtrl.toggleMenu()">
+                        <i class="fa fa-bars"></i>
+                    </md-button>
+                    <h2 flex layout="row">
+                        <div flex-gt-xs="90">
+                            <span>Boiler Plate served with Docker | Webpack 2 | ES2015 | AngularJS | Angular Material</span>
+                        </div>
+                    </h2>
+                </div>
+            </md-toolbar>
+            <div ui-view="content" flex layout-fill layout-padding></div>
+        </md-content>
+    </body>
+</html>
