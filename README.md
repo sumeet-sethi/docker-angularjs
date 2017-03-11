@@ -1,6 +1,7 @@
 ## Notes
 
 This Boiler Plate (referenced throughout the app as BP | Bp | bp) is running the following stack:
+-	Docker
 -   Webpack 2 
 -   ES2015 (ES6)
 -   AngularJS  
