@@ -6,8 +6,8 @@ export class BpService {
     }
 
     getBpService() {
-        //return this.$resource('./app/data/Response.json');  //Note: Call local JSON files with GET
-        return this.$resource(this.bpUrl);
+        return this.$resource('./app/data/Response.json');  //Note: Call local JSON files with GET
+        //return this.$resource(this.bpUrl);
     }
 
     static bpFactory($resource) {
