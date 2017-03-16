@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:slim
 LABEL Name=BP Version=1.0.0
 RUN npm install webpack -g
 RUN npm install http-server -g
