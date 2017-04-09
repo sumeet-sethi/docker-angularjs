@@ -3,7 +3,7 @@
   "license": "MIT",
   "name": "BP",
   "version": "1.0.0",
-  "description": "Boiler Plate served with Docker | Webpack 2 | ES2015 | AngularJS | Angular Material",
+  "description": "Using Docker to deploy AngularJS app",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --progress --colors",
@@ -11,7 +11,7 @@
     "prod": "webpack -p"
   },
   "dependencies": {
-    "angular": "~1.4.14",
+    "angular": "~1.5.11",
     "angular-material": "^1.1.3",
     "angular-animate": "~1.5.11",
     "angular-aria": "~1.5.11",

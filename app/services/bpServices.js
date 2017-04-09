@@ -6,7 +6,7 @@ export class BpService {
     }
 
     getBpService() {
-        return this.$resource('./app/data/Response.json');  //Note: Call local JSON files with GET
+        return this.$resource('./app/data/Response.json');  // Note: Call local JSON files with GET
         //return this.$resource(this.bpUrl);
     }
 
@@ -16,6 +16,5 @@ export class BpService {
 }
 
 BpService.bpFactory.$inject = ['$resource'];
-
 angular.module(moduleName, []).factory('bpService', BpService.bpFactory);
 export default moduleName;

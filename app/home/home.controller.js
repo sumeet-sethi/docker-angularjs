@@ -15,6 +15,7 @@ class HomeController {
 				user: ''
 			}
 		}
+		vm.dialogText = 'COMPONENT ( $onInit ) - Enter Team A and Team B users';
 	}
 
 	clearForm() {
@@ -26,6 +27,7 @@ class HomeController {
 				user: ''
 			}
 		};
+		this.dialogText = 'COMPONENT ( $onChanges ) - Form was cleared. Re-enter users to submit';
 	}
 
 	bpAPI(isSubmitRequest) {
@@ -45,6 +47,7 @@ class HomeController {
 
 		this.bpService.getBpService().get(requestObject).$promise.then
 			((result) => {
+				this.dialogText = 'COMPONENT ( $onChanges ) - Users were successfully submitted!!!';
 				this.$mdToast.show(
 					this.$mdToast.simple()
 						.textContent("API Success: " + result.message)
@@ -52,6 +55,7 @@ class HomeController {
 						.position('bottom left')
 						.hideDelay(5000));
 			}, (error) => {
+				this.dialogText = 'COMPONENT ( $onChanges ) - Users submission failed!!!';
 				this.$mdToast.show(
 					this.$mdToast.simple()
 						.textContent("API Failed: " + error)

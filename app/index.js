@@ -14,15 +14,16 @@ import home from './home/home.module';
 import menu from './menu/menu.module';
 import secondScreen from './secondScreen/secondScreen.module';
 import BpService from './services/bpServices';
+import DialogComponent from './common/common.module';
 import './assets/styles/bp.css';
 
-export const bpuiModule = angular.module('bpui', [angularMaterial, angularAnimate, angularUIRouter, angularMessages, angularResource, menu, secondScreen, home, BpService]);
+export const bpuiModule = angular.module('bpui', [angularMaterial, angularAnimate, angularUIRouter, angularMessages, angularResource, menu, secondScreen, home, BpService, DialogComponent]);
 bpuiModule.config(BpuiConfig);
 bpuiModule.controller('BpuiController', BpuiController);
 
 BpuiConfig.$inject = ['$stateProvider', '$mdThemingProvider'];
 function BpuiConfig($stateProvider, $mdThemingProvider) {
-    $mdThemingProvider.theme('default').primaryPalette('light-blue', {'default': '800'}).accentPalette('blue-grey').dark();
+    $mdThemingProvider.theme('default').primaryPalette('light-blue', {'default': '800'}).accentPalette('blue-grey');
     $mdThemingProvider.theme("success-notification");
     $mdThemingProvider.theme("error-notification");
 

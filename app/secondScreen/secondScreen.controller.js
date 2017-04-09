@@ -11,6 +11,7 @@ class SecondScreenController {
 			confirmPassword: '',
 			passwordMatch: false
 		};
+		vm.dialogText = 'COMPONENT ( $onInit ) - Add User';
 	}
 
 	clearForm() {
@@ -22,6 +23,7 @@ class SecondScreenController {
 		};
 		this.$scope.secondScreenForm.$setPristine(true);
 		this.$scope.secondScreenForm.$setUntouched(true);
+		this.dialogText = 'COMPONENT ( $onChanges ) - Form was cleared. Re-enter user to add';
 	}
 
 	submit() {
@@ -49,6 +51,7 @@ class SecondScreenController {
 
 		this.bpService.getBpService().save(requestObject).$promise.then
 			((result) => {
+				this.dialogText = 'COMPONENT ( $onChanges ) - User was successfully added!!!';
 				this.$mdToast.show(
 					this.$mdToast.simple()
 						.textContent(successMessage)
@@ -56,6 +59,7 @@ class SecondScreenController {
 						.position('bottom left')
 						.hideDelay(5000));
 			}, (error) => {
+				this.dialogText = 'COMPONENT ( $onChanges ) - User addition failed!!!';
 				this.$mdToast.show(
 					this.$mdToast.simple()
 						.textContent(errorMessage + error)

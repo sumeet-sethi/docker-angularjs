@@ -1,5 +1,8 @@
 ## Notes
 
+This app is a quick start way to deploy AngularJS app using Docker. 
+I will be using one of my earlier boilerplate as base code to cut the development time on this app.
+
 This Boiler Plate (referenced throughout the app as BP | Bp | bp) is running the following stack:
 -	Docker
 -   Webpack 2 
