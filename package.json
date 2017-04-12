@@ -1,7 +1,7 @@
 {
   "author": "Sumeet Sethi",
   "license": "MIT",
-  "name": "BP",
+  "name": "docker-angularjs",
   "version": "1.0.0",
   "description": "Using Docker to deploy AngularJS app",
   "main": "index.js",
